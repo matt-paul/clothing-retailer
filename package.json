@@ -17,5 +17,8 @@
     "grunt-http-server": "^1.13.0",
     "grunt-sass": "^1.1.0",
     "http-server": "^0.8.5"
+  },
+  "dependencies": {
+    "angular": "^1.4.9"
   }
 }

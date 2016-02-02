@@ -1,0 +1,62 @@
+[
+  {
+    "name": {
+        "description": "Almond Toe Court Shoes, Patent Black",
+        "type": "string"
+    },
+    "category": {
+      "description": "Women's Footwear",
+      "type": "string"
+    },
+    "price": {
+      "unit": "99.00",
+       "type": "integer"
+    },
+    "stock": {
+      "units": "5",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Suede Shoes, Blue",
+        "type": "string"
+    },
+    "category": {
+      "description": "Women's Footwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "42.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "4",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Leather Driver Saddle Loafers, Tan",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Footwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "34.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "12",
+      "minimum": "0",
+      "type": "integer"
+    }
+  }
+]
+

@@ -1,7 +1,7 @@
 {
 "version": 3,
-"mappings": "",
-"sources": [],
+"mappings": "AAAA,EAAG;EACD,UAAU,EAAE,KAAK;;ACCnB,IAAK;EACH,KAAK,EAAE,KAAK",
+"sources": ["partials/_products.scss","main.scss"],
 "names": [],
 "file": "main.css"
 }

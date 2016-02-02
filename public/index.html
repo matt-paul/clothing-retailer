@@ -3,11 +3,25 @@
 <head>
   <meta charset="UTF-8">
   <title>Clothing Retailer</title>
-  <script src="styles/main.css"></script>
+  <link rel="stylesheet" href="styles/main.css">
+    <link rel="icon"
+      href="images/favicon.ico"
+        type="image/x-icon" />
 </head>
-<body>
+<body ng-app="app">
 
 
-  <h1>Testing testing 123</h1>
+  <div data-ng-include data-src="'views/header.html'"></div>
+
+  <div class="container" ng-controller="ProductController as ctrl">
+
+    <div data-ng-include data-src="'views/product.html'"></div>
+
+  </div>
+
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.4.9/angular.min.js"></script>
+  <script src="scripts/app.js"></script>
+  <script src="scripts/controllers/productController.js"></script>
+  <script src="scripts/services/productService.js"></script>
 </body>
 </html>

@@ -1,0 +1,16 @@
+<div class="main">
+
+  <ul class="product-list">
+
+    <li class="product" ng-repeat="product in ctrl.productList">
+    <div class="product-info">
+      <h4 class="product-name">{{ product.name.description }}</h4>
+      <span class="product-price">{{ product.price.unit }}</span>
+      <span class="product-stock">{{ product.stock.units }}</span>
+      <span class="product-category">{{ product.category.description }}</span>
+    </div>
+    </li>
+
+  </ul>
+
+</div>
