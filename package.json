@@ -1,0 +1,11 @@
+{
+  "name": "retailer",
+  "version": "1.0.0",
+  "description": "A responsive website for a clothing retailer",
+  "main": "y",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "matt paul",
+  "license": "ISC"
+}

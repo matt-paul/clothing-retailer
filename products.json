@@ -1,0 +1,32 @@
+{
+   "$schema": "http://json-schema.org/draft-04/schema#",
+   "title": "Product",
+   "description": "clothing retailer product",
+   "type": "object",
+
+   "properties": {
+
+      "name": {
+         "description": "Almond Toe Court Shoes, Patent Black",
+         "type": "string"
+      },
+
+      "category": {
+        "description": "Women's Footwear",
+        "type": "string"
+      },
+
+      "price": {
+         "type": "99.00",
+         "minimum": "0"
+      },
+
+      "stock": {
+        "units": "5",
+        "minimum": "0",
+        "type": "integer"
+      }
+   },
+
+   "required": ["id", "name", "price"]
+}
