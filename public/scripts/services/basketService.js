@@ -3,7 +3,7 @@
 
       angular.module('app').factory('BasketService', function () {
 
-          var basket = ["bananas"];
+          var basket = [];
 
           var total = [];
 
@@ -25,7 +25,7 @@
 
             removeFromBasket: function (product) {
               var i = basket.indexOf(product);
-              if(i != -1) {
+              if(i !== -1) {
                 basket.splice(i,1);
               }
               return basket;
