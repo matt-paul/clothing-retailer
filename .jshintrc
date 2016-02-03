@@ -1,5 +1,5 @@
 {
-  "predef": ["angular", "console"],
+  "predef": ["angular", "console", "expect"],
   "curly": true,
   "eqeqeq": true,
   "immed": true,
@@ -12,6 +12,11 @@
   "boss": true,
   "eqnull": true,
   "browser": true,
-  "globals": {}
+  "globals": {
+    "expect": false,
+    "it": false,
+    "describe": false,
+    "beforeEach": false
+  }
 
 }
