@@ -10,10 +10,12 @@
 </head>
 <body ng-app="app">
 
-
   <div data-ng-include data-src="'views/header.html'"></div>
 
   <div class="container" ng-controller="ProductController as ctrl">
+
+  <div data-ng-include data-src="'views/basket.html'"></div>
+
 
     <div data-ng-include data-src="'views/product.html'"></div>
 
@@ -23,5 +25,6 @@
   <script src="scripts/app.js"></script>
   <script src="scripts/controllers/productController.js"></script>
   <script src="scripts/services/productService.js"></script>
+  <script src="scripts/services/basketService.js"></script>
 </body>
 </html>

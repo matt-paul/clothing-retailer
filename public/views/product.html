@@ -3,11 +3,19 @@
   <ul class="product-list">
 
     <li class="product" ng-repeat="product in ctrl.productList">
+      <div class="product-image-container">
+        <img src="http://placehold.it/200x200" alt=" {{ product.name.description }} Picture">
+      </div>
     <div class="product-info">
       <h4 class="product-name">{{ product.name.description }}</h4>
-      <span class="product-price">{{ product.price.unit }}</span>
-      <span class="product-stock">{{ product.stock.units }}</span>
-      <span class="product-category">{{ product.category.description }}</span>
+      <p class="product-price">{{ product.price.unit | currency:"£"}}</p>
+      <p class="product-stock"> In stock: {{ product.stock.units }}</p>
+      <p class="product-category">Category{{ product.category.description
+        }}</p>
+      <button class="button-add" ng-click="ctrl.addToBasket(product)">Add to
+      Basket</button>
+      <button class="button-remove"
+        ng-click="ctrl.removeFromBasket(product)">Remove</button>
     </div>
     </li>
 

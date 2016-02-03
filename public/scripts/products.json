@@ -57,6 +57,105 @@
       "minimum": "0",
       "type": "integer"
     }
+  },
+
+  {
+    "name": {
+        "description": "Flip Flops, Red",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Footwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "19.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "6",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Flip Flops, Blue",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Footwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "19.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "0",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Gold Button Cardigan, Black",
+        "type": "string"
+    },
+    "category": {
+      "description": "Women's Casualwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "167.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "6",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Cotton Shorts, Medium Red",
+        "type": "string"
+    },
+    "category": {
+      "description": "Women's Casualwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "30.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "5",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Fine Stripe Short Sleeve Shirt, Grey",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Casualwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "49.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "9",
+      "minimum": "0",
+      "type": "integer"
+    }
   }
 ]
-

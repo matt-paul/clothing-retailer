@@ -1,0 +1,22 @@
+<aside class="basket">
+  <h3>Basket</h3>
+  <div class="basket-items">
+    <ul>
+      <li ng-repeat="item in ctrl.basket track by $index">
+        <p>  {{ item.name.description }}</p>
+      </li>
+    </ul>
+  </div>
+
+  <div class="basket-total-info">
+    <form>
+     Voucher Code:<input type="text" name="Voucher" value="">
+                <input type="Submit" value="Update">
+    </form>
+    <span>Subtotal:{{ basket.subtotal }}</span>
+    <span>Discount:{{ basket.discount }}</span>
+    <span>{{ basket.total }}</span>
+  </div>
+
+
+</aside>

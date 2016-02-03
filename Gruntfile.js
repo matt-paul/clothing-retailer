@@ -41,9 +41,6 @@ module.exports = function(grunt) {
         // run in parallel with other tasks
         runInBackground: false,
 
-        // specify a logger function. By default the requests are
-        // sent to stdout.
-        // logFn: function(req, res, error) { }
 
     }
 
@@ -79,6 +76,10 @@ module.exports = function(grunt) {
       }
     },
     watch: {
+      // options: {
+        // Start a live reload server on the default port 35729
+        // livereload: true,
+      // },
       gruntfile: {
         files: '<%= jshint.gruntfile.src %>',
         tasks: ['jshint:gruntfile']

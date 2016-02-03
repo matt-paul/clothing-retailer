@@ -3,17 +3,22 @@
 
   angular
       .module('app', [])
-      .controller('ProductController', ['productList', function (productList) {
+      .controller('ProductController', ['ProductService', 'BasketService', function (ProductService, BasketService) {
 
         var self = this;
 
         self.getProducts = (function() {
-          productList.then(function(response) {
-            console.log(response.data);
+          ProductService.then(function(response) {
             self.productList = response.data;
           });
         })();
 
+
+        self.basket = BasketService.basket;
+
+        self.addToBasket = BasketService.addToBasket;
+
+        self.removeFromBasket = BasketService.removeFromBasket;
       }]);
 }());
 
