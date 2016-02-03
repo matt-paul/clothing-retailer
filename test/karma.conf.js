@@ -16,7 +16,7 @@ module.exports = function(config) {
       'node_modules/angular-mocks/angular-mocks.js',
       'public/scripts/*.js',
       'public/scripts/**/*.js',
-      'test/**/*.js'
+      'test/unit/*.js'
     ],
 
     exclude: [],

@@ -165,8 +165,10 @@
 
         describe('applying discounts', function () {
 
-              xit('Voucher code £FREE does not remove anything from the total', function () {
-
+              it('Voucher code £FREE does not remove anything from the total', function () {
+                ctrl.service.addToBasket(socks);
+                ctrl.service.applyVoucher("£FREE");
+                expect(BasketService.total).toEqual(9.00);
               });
 
               it('Voucher code £5-OFF removes £5 from total', function () {
