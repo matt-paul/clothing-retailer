@@ -27,11 +27,11 @@
 
           var socks = {
               "name": {
-                  "description": "Almond Toe Court Shoes, Patent Black",
+                  "description": "Socks, Green",
                   "type": "string"
               },
               "category": {
-                "description": "Women's Footwear",
+                "description": "Men's Footwear",
                 "type": "string"
               },
               "price": {
@@ -44,7 +44,46 @@
                 "type": "integer"
               }
           };
-          var towel = {};
+
+          var jumper = {
+              "name": {
+                  "description": "Jumper, Blue",
+                  "type": "string"
+              },
+              "category": {
+                "description": "Men's Casualwear",
+                "type": "string"
+              },
+              "price": {
+                "unit": "51.00",
+                  "type": "integer"
+              },
+              "stock": {
+                "units": "5",
+                "minimum": "0",
+                "type": "integer"
+              }
+          };
+
+          var jacket = {
+              "name": {
+                  "description": "Jacket, Grey",
+                  "type": "string"
+              },
+              "category": {
+                "description": "Men's Casualwear",
+                "type": "string"
+              },
+              "price": {
+                "unit": "56.00",
+                  "type": "integer"
+              },
+              "stock": {
+                "units": "0",
+                "minimum": "0",
+                "type": "integer"
+              }
+            };
 
         beforeEach(module('app'));
 
@@ -80,6 +119,11 @@
                   expect(BasketService.basket.length).toEqual(1);
               });
 
+              it('should not add an out of stock item to the basket', function () {
+                  ctrl.service.addToBasket(jacket);
+                  expect(BasketService.basket.length).toEqual(0);
+              });
+
         });
 
         describe('removing items', function () {
@@ -94,7 +138,7 @@
               });
 
               it('an item should not be removed from the basket when it is a different item', function () {
-                ctrl.service.removeFromBasket(towel);
+                ctrl.service.removeFromBasket(jumper);
                 expect(BasketService.basket.length).toEqual(1);
               });
 
@@ -132,27 +176,34 @@
               });
 
               it('Voucher code £10-OFF removes £10 from total having spent more than £50', function () {
-                 ctrl.service.addToBasket(shoes);
+                 ctrl.service.addToBasket(jumper);
                  ctrl.service.applyVoucher('£10-OFF');
-                 expect(BasketService.total).toEqual(89.00);
+                 expect(BasketService.total).toEqual(41.00);
               });
 
-              // it('£10-OFF does not work if total is less than £50', function () {
-              //     ctrl.service.addToBasket(socks);
-              //     ctrl.service.applyVoucher('£10-OFF');
-              //     expect(BasketService.total).toEqual(9.00)
-              //   });
+              it('£10-OFF does not work if total is less than £50', function () {
+                  ctrl.service.addToBasket(socks);
+                  ctrl.service.applyVoucher('£10-OFF');
+                  expect(BasketService.total).toEqual(9.00);
+                });
 
-              xit('Voucher code £15-OFF removes £15 from total when one pair of shoes are included and total is more than £75', function () {
-
+              it('Voucher code £15-OFF removes £15 from total when one pair of shoes are included and total is more than £75', function () {
+                  ctrl.service.addToBasket(shoes);
+                  ctrl.service.applyVoucher('£15-OFF');
+                  expect(BasketService.total).toEqual(84.00);
               });
 
-              xit('£15-OFF does not work on orders less than £75', function () {
-
+              it('£15-OFF does not work on orders less than £75', function () {
+                  ctrl.service.addToBasket(jumper);
+                  ctrl.service.applyVoucher('£15-OFF');
+                  expect(BasketService.total).toEqual(51.00);
               });
 
-              xit('£15-OFF only works when there is a pair of shoes in the order', function () {
-
+              it('£15-OFF only works when there is a pair of shoes in the order', function () {
+                  ctrl.service.addToBasket(jumper);
+                  ctrl.service.addToBasket(jumper);
+                  ctrl.service.applyVoucher('£15-OFF');
+                  expect(BasketService.total).toEqual(102.00);
               });
 
               xit('can only be applied once', function () {
