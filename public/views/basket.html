@@ -10,7 +10,7 @@
 
   <div class="basket-total-info">
 
-    <form ng-submit="ctrl.service.applyVoucher()">
+    <form ng-submit="ctrl.service.applyVoucher(code)">
       Voucher Code:
       <input type="text" ng-model="code" name="code" />
       <input type="submit" id="submit" value="Apply Voucher To Order" />
