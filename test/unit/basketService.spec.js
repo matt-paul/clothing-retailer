@@ -79,6 +79,36 @@
           });
 
         });
+
+        describe('applying discounts', function () {
+
+          xit('Voucher code £FREE does not remove anything from the total', function () {
+
+          });
+
+          xit('Voucher code £5-OFF removes £5 from total', function () {
+
+          });
+
+          xit('Voucher code £10-OFF removes £10 from total having spent more than £50', function () {
+
+          });
+
+          xit('Voucher code £15-OFF removes £15 from total when one pair of shoes are included and total is more than £75', function () {
+
+          });
+
+
+        });
+
+
+        describe('total cost of items within basket', function () {
+
+          xit('adds two items prices together', function () {
+
+
+          });
+        });
     });
 }());
 
