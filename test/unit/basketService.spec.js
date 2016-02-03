@@ -56,7 +56,7 @@
 
 
           it('should have an item in the basket when one has been added', function () {
-              ctrl.addToBasket(shoes);
+              ctrl.service.addToBasket(shoes);
               expect(BasketService.basket.length).toEqual(1);
           });
 
@@ -65,16 +65,16 @@
         describe('removing items', function () {
 
           beforeEach(function() {
-            ctrl.addToBasket(shoes);
+            ctrl.service.addToBasket(shoes);
           });
 
           it('an item should be removed from the basket when required', function () {
-            ctrl.removeFromBasket(shoes);
+            ctrl.service.removeFromBasket(shoes);
             expect(BasketService.basket.length).toEqual(0);
           });
 
           it('an item should not be removed from the basket when it is a different item', function () {
-            ctrl.removeFromBasket(towel);
+            ctrl.service.removeFromBasket(towel);
             expect(BasketService.basket.length).toEqual(1);
           });
 
@@ -86,9 +86,10 @@
 
           });
 
-          xit('Voucher code £5-OFF removes £5 from total', function () {
-
-          });
+          // it('Voucher code £5-OFF removes £5 from total', function () {
+          //   ctrl.service.applyVoucher('£5-OFF');
+          //   expect(BasketService.total).toEqual(50);
+          // });
 
           xit('Voucher code £10-OFF removes £10 from total having spent more than £50', function () {
 
@@ -98,15 +99,24 @@
 
           });
 
+          xit('can only be applied once', function () {
+
+          });
+
 
         });
 
 
         describe('total cost of items within basket', function () {
 
-          xit('adds two items prices together', function () {
+          it('adds two items prices together', function () {
+            ctrl.service.addToBasket(shoes);
+            ctrl.service.addToBasket(shoes);
+            expect(BasketService.totalCost).toEqual(198.00);
+          });
 
-
+          it('should remove price of an item if it is removed from the basket', function () {
+            ctrl.service.removeFromBasket(shoes);
           });
         });
     });

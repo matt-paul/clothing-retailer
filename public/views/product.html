@@ -12,10 +12,10 @@
       <p class="product-stock"> In stock: {{ product.stock.units }}</p>
       <p class="product-category">Category{{ product.category.description
         }}</p>
-      <button class="button-add" ng-click="ctrl.addToBasket(product)">Add to
+      <button class="button-add" ng-click="ctrl.service.addToBasket(product)">Add to
       Basket</button>
       <button class="button-remove"
-        ng-click="ctrl.removeFromBasket(product)">Remove</button>
+        ng-click="ctrl.service.removeFromBasket(product)">Remove</button>
     </div>
     </li>
 

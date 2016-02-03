@@ -13,12 +13,8 @@
           });
         })();
 
+        self.service = BasketService;
 
-        self.basket = BasketService.basket;
-
-        self.addToBasket = BasketService.addToBasket;
-
-        self.removeFromBasket = BasketService.removeFromBasket;
       }]);
 }());
 

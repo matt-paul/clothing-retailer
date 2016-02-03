@@ -5,45 +5,44 @@
 
           var basket = [];
 
-          var total = [];
-
           var totalCost = 0;
 
-          return {
+          var service ={};
 
-            basket: basket,
+          var tally = [];
 
-            total: total,
+          service.basket = basket;
 
-            totalCost: totalCost,
+          service.totalCost = totalCost;
 
-
-            addToBasket: function (product) {
-              basket.push(product);
-              return basket;
-            },
-
-            removeFromBasket: function (product) {
-              var i = basket.indexOf(product);
-              if(i !== -1) {
-                basket.splice(i,1);
-              }
-              return basket;
-            },
-
-            updateBasket: function () {
-              console.log("Someething here to upfate the basket");
-              return basket;
-            }
-            // calculateTotal: function () {
-            //   var totalCost = total.reduce(add, 0);
-            //     function add(a,b) {
-            //       return a+b;
-            //     }
-            //   this.totalCost = totalCost;
-            // }
-
+          service.addToBasket =  function (product) {
+            basket.push(product);
+            var p = parseFloat(product.price.unit);
+            tally.push(p);
+            this.calculateTotal();
           };
+
+          service.removeFromBasket = function (product) {
+            var i = basket.indexOf(product);
+            if(i !== -1) {
+              basket.splice(i,1);
+            }
+          };
+
+          service.applyVoucher = function (code) {
+            console.log("applying voucher");
+          };
+
+          service.calculateTotal = function () {
+            var totalCost = tally.reduce(add, 0);
+              function add(a,b) {
+                return a+b;
+              }
+            this.totalCost = totalCost;
+          };
+
+          return service;
+
       });
 
 }());
