@@ -7,10 +7,11 @@ cd retailer
 npm install
 
 ```
+Start up server, lint etc..
 ```
 grunt
 ```
-Run unit tests...
+To run unit tests in a seperate terminal...
 ```
 karma start test/karma.conf.js
 ```
