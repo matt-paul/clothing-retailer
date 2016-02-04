@@ -15,6 +15,11 @@
 
         self.service = BasketService;
 
+        self.custom = true;
+        self.toggleCustom = function() {
+            self.custom = self.custom === false ? true: false;
+        };
+
       }]);
 }());
 

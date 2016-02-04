@@ -1,0 +1,25 @@
+
+@import 'modules/variables';
+
+@import 'partials/products';
+@import 'partials/basket';
+@import 'partials/header';
+
+html {
+  background-color: $shop-foreground;
+  body {
+    margin: 0;
+    .main-container {
+      position: relative;
+      width: 100%;
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0px;
+      box-sizing: border-box;
+      background-color: $shop-background;
+    }
+  }
+}
+
+
+

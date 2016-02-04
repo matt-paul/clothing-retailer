@@ -1,0 +1,20 @@
+    .header {
+      z-index: 1000;
+      margin: 0 auto;
+      display: flex;
+      background: $shop-header;
+      background-size: $shop-header-stripe-size;
+      height: 100px;
+      width: 100%;
+      position: fixed;
+      h1 {
+        flex-grow: 1;
+        color: white;
+        margin: 30px;
+        // padding: 30px;
+        font-size: 3em;
+      }
+      .sort {
+        // display: flex;
+      }
+    }

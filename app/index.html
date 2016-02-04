@@ -4,20 +4,18 @@
   <meta charset="UTF-8">
   <title>Clothing Retailer</title>
   <link rel="stylesheet" href="styles/main.css">
-    <link rel="icon"
-      href="images/favicon.ico"
-        type="image/x-icon" />
+  <link rel="icon" href="images/favicon.ico" type="image/x-icon" />
 </head>
 <body ng-app="app">
 
-  <div data-ng-include data-src="'views/header.html'"></div>
-
   <div class="container" ng-controller="ProductController as ctrl">
 
-  <div data-ng-include data-src="'views/basket.html'"></div>
+    <div data-ng-include data-src="'views/header.html'"></div>
 
-
-    <div data-ng-include data-src="'views/product.html'"></div>
+    <div class="main-container">
+      <div data-ng-include data-src="'views/basket.html'"></div>
+      <div data-ng-include data-src="'views/product.html'"></div>
+    </div>
 
   </div>
 

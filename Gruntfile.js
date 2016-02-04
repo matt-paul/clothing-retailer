@@ -5,7 +5,7 @@ module.exports = function(grunt) {
     'http-server': {
 
     'dev': {
-        root: './public',
+        root: './app',
         port: 8080,
         host: "127.0.0.1",
         cache: 10,
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
         },
         dist: {
             files: {
-                'public/styles/main.css': 'public/styles/main.scss'
+                'app/styles/main.css': 'app/styles/main.scss'
             }
         }
     },
@@ -59,7 +59,7 @@ module.exports = function(grunt) {
         jshintrc: true
       },
       gruntfile: {
-        src: ['Gruntfile.js', 'public/**/*.js']
+        src: ['Gruntfile.js', 'app/**/*.js']
       }
     },
 
@@ -69,7 +69,7 @@ module.exports = function(grunt) {
         tasks: ['jshint:gruntfile']
       },
       karma: {
-        files: ['public/scripts/**/*.js', 'test/unit/*.js'],
+        files: ['app/scripts/**/*.js', 'test/unit/*.js'],
         tasks: ['karma:unit:run'] //NOTE the :run flag
       },
       css: {

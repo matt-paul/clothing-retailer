@@ -1,13 +1,9 @@
-<aside class="basket">
+<aside class="basket" ng-hide="ctrl.custom">
 
-  <h2>Basket</h2>
-
+  <h2 id="basket-heading">Basket</h2>
+  <div id="error"></div>
   <div class="table-container">
     <table class="basket-items">
-      <tr>
-        <th class="table-basket-description">Item</th>
-        <th class="table-basket-price">Price</th>
-      </tr>
         <tr ng-repeat="item in ctrl.service.basket track by $index">
           <td> {{ item.name.description }}</td>
           <td> {{ item.price.unit | currency: "£" }} </td>
@@ -17,13 +13,12 @@
 
   <div class="basket-total-info">
 
+    <p>Subtotal:{{ ctrl.service.subTotal | currency: "£" }}</p>
     <form ng-submit="ctrl.service.applyVoucher(code)">
-      Voucher Code:
-      <input type="text" ng-model="code" name="code" />
-      <input type="submit" id="submit" value="Redeem" />
+      <input type="text" ng-model="code" name="code" placeholder="Enter a Valid Voucher Code"/>
+      <button type="submit" id="submit" value="Redeem"> Redeem</button>
     </form>
 
-    <p>Subtotal:{{ ctrl.service.subTotal | currency: "£" }}</p>
     <p>Discount:{{ ctrl.service.discount | currency: "£" }}</p>
     <p>{{ ctrl.service.total | currency: "£" }}</p>
   </div>

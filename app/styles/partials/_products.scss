@@ -1,0 +1,37 @@
+.product-container {
+  max-width: 1200px;
+}
+
+.product-list {
+  padding-top: 120px;
+  display: flex;
+  background-color: $shop-background;
+  flex-direction: row;
+  flex-wrap: wrap;
+  // .product:first-child, .product:nth-child(2) {
+    flex: 2 40%;
+    }
+  .product {
+    margin: 2%;
+    padding: 1%;
+    flex-grow: 1;
+    flex-basis: 15%;
+    background: $shop-foreground;
+    min-width: 200px;
+    border: $retailer-border;
+    img {
+      max-width: 100%;
+    }
+    button {
+      padding: .3em .8em;
+      border: 1px solid #446d88;
+      background: #58a linear-gradient(hsla(0,0%,100%,.4), transparent);
+      border-radius: .2em;
+      box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+      color:white;
+      text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+      font-size: 60%;
+      line-height: 1.5;
+    }
+  // }
+}

@@ -1,0 +1,44 @@
+.basket {
+  position: fixed;
+  margin: 5%;
+  margin-left: 30%;
+  margin-top: 15%;
+  color: $shop-foreground;
+  background: $blue-gradient;
+  border: $button-basket-border;
+  border-radius: 5px;
+  width: 300px;
+  max-height: 500px;
+  float: right;
+  // border: $retailer-border;
+  #basket-heading {
+    padding: 3%;
+    margin: 5%;
+  }
+  input {
+    width: 98%;
+    line-height: 2;
+  }
+  .table-container {
+    color: black;
+    height: 200px;
+    border: $retailer-border;
+    overflow: auto;
+    background-color: $shop-foreground;
+    .table-basket-description {
+      width: 250px;
+    }
+  }
+    button {
+      width: 100%;
+      padding: .3em .8em;
+      border: 1px solid #446d88;
+      background: #58a linear-gradient(hsla(0,0%,100%,.4), transparent);
+      border-radius: .2em;
+      box-shadow: 0 .05em .25em rgba(0,0,0,.5);
+      color:white;
+      text-shadow: 0 -.05em .05em rgba(0,0,0,.5);
+      font-size: 60%;
+      line-height: 1.5;
+    }
+}

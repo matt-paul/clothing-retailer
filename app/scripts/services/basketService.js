@@ -46,6 +46,7 @@
           };
 
           service.applyVoucher = function (code) {
+            this.clearError();
             if (code === "£15-OFF" && this.subTotal > 75.00 && service.shoesInBasket() ) {
               this.total = this.subTotal - 15;
             } else if (code === "£10-OFF" && this.subTotal > 50.00) {
@@ -54,6 +55,7 @@
               this.total = this.subTotal - 5;
             } else {
               this.total = this.subTotal;
+              this.writeError();
             }
 
           };
@@ -67,17 +69,27 @@
             this.total = subTotal;
           };
 
-          service.calculateTotal = function () {
-
-
-          };
-
 
           service.shoesInBasket = function () {
             for(var i=0; i < basket.length; i++) {
               if(basket[i].category.description.indexOf("Footwear") !== -1) {
               return true;
               }
+            }
+          };
+
+          service.writeError = function () {
+            if (document.readyState === "complete") {
+              var div = document.getElementById('error');
+              var content = "That is an invalid voucher code";
+              div.innerHTML = content;
+            }
+          };
+
+          service.clearError = function () {
+            if (document.readyState === "complete") {
+              var div = document.getElementById('error');
+              div.innerHTML = '';
             }
           };
 

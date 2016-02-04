@@ -157,5 +157,104 @@
       "minimum": "0",
       "type": "integer"
     }
+  },
+
+  {
+    "name": {
+        "description": "Fine Stripe Short Sleeve Shirt, Green",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Casualwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "39.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "3",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+        "description": "Sharkskin Waistcoat, Charcoal",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "75.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "2",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+  {
+    "name": {
+        "description": "Lightweight Patch Pocket Blazer, Deer",
+        "type": "string"
+    },
+    "category": {
+      "description": "Men's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "175.50",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "1",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+      "description": "Bird Print Dress, Black",
+      "type": "string"
+    },
+    "category": {
+      "description": "Women's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "270.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "10",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+
+  {
+    "name": {
+      "description": "Mid Twist Cut-Out Dress, Pink",
+      "type": "string"
+    },
+    "category": {
+      "description": "Women's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "540.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "5",
+      "minimum": "0",
+      "type": "integer"
+    }
   }
 ]
