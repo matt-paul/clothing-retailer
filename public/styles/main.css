@@ -23,14 +23,18 @@
   position: fixed;
   margin: 5%;
   margin-left: 60%;
-  background-color: #FFFFFF;
+  background-color: green;
   width: 300px;
   height: 400px;
   float: right;
   border: 1px solid #D8D8D8; }
-  .basket .basket-items {
-    min-height: 200px;
-    border: 1px solid #D8D8D8; }
+  .basket .table-container {
+    height: 200px;
+    border: 1px solid #D8D8D8;
+    overflow: auto;
+    background-color: #FFFFFF; }
+    .basket .table-container .table-basket-description {
+      width: 250px; }
 
 body {
   position: relative;

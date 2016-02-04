@@ -2,13 +2,18 @@
   position: fixed;
   margin: 5%;
   margin-left: 60%;
-  background-color: $shop-foreground;
+  background-color: green;
   width: 300px;
   height: 400px;
   float: right;
   border: $retailer-border;
-    .basket-items {
-      min-height: 200px;
-      border: $retailer-border;
+  .table-container {
+    height: 200px;
+    border: $retailer-border;
+    overflow: auto;
+    background-color: $shop-foreground;
+    .table-basket-description {
+      width: 250px;
+    }
   }
 }
