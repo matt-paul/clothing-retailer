@@ -1,24 +1,22 @@
-<div class="main">
+<section class="product-container">
 
-  <ul class="product-list">
+  <div class="product-list">
 
-    <li class="product" ng-repeat="product in ctrl.productList">
+    <div class="product" ng-repeat="product in ctrl.productList">
       <div class="product-image-container">
-        <img src="http://placehold.it/200x200" alt=" {{ product.name.description }} Picture">
+        <img src="http://placehold.it/400x400" alt=" {{ product.name.description }} Picture">
       </div>
     <div class="product-info">
       <h4 class="product-name">{{ product.name.description }}</h4>
       <p class="product-price">{{ product.price.unit | currency:"£"}}</p>
       <p class="product-stock"> In stock: {{ product.stock.units }}</p>
-      <p class="product-category">Category{{ product.category.description
-        }}</p>
       <button class="button-add" ng-click="ctrl.service.addToBasket(product)">Add to
       Basket</button>
       <button class="button-remove"
         ng-click="ctrl.service.removeFromBasket(product)">Remove</button>
     </div>
-    </li>
+    </div>
 
-  </ul>
+  </div>
 
-</div>
+</section>

@@ -1,14 +1,33 @@
+
+@import 'modules/colours';
+
 @import 'partials/products';
 @import 'partials/basket';
 
+
 body {
-  width: 960px;
-  // .container {
-  // position: relative;
+  position: relative;
   width: 100%;
-  max-width: 960px;
+  max-width: 1200px;
   margin: 0 auto;
-  padding: 0 20px;
+  padding: 0px;
   box-sizing: border-box;
+  background-color: $shop-background;
 }
 
+.header {
+  margin: 0 auto;
+  display: flex;
+  background-color: $shop-header;
+  h1 {
+    flex-grow: 1;
+  }
+  .sort {
+    display: flex;
+    background-color: $shop-header;
+  }
+}
+
+html {
+  background-color: $shop-foreground;
+}

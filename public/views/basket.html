@@ -1,12 +1,12 @@
 <aside class="basket">
-  <h3>Basket</h3>
-  <div class="basket-items">
-    <ul>
-      <li ng-repeat="item in ctrl.service.basket track by $index">
-        <p>  {{ item.name.description }}</p>
-      </li>
-    </ul>
-  </div>
+  <h2>Basket</h2>
+  <table class="basket-items">
+    <!-- <ul> -->
+      <tr ng-repeat="item in ctrl.service.basket track by $index">
+        <td>  {{ item.name.description }}</td>
+      </tr>
+    <!-- </ul> -->
+  </table>
 
   <div class="basket-total-info">
 
@@ -16,9 +16,9 @@
       <input type="submit" id="submit" value="Apply Voucher To Order" />
     </form>
 
-    <span>Subtotal:{{ basket.subtotal }}</span>
-    <span>Discount:{{ basket.discount }}</span>
-    <span>{{ basket.total }}</span>
+    <p>Subtotal:{{ ctrl.service.subTotal | currency }}</p>
+    <p>Discount:{{ ctrl.service.discount | currency }}</p>
+    <p>{{ ctrl.service.total | currency }}</p>
   </div>
 
 

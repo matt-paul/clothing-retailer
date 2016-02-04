@@ -64,6 +64,7 @@
                 return a+b;
               }
             this.subTotal = subTotal;
+            this.total = subTotal;
           };
 
           service.calculateTotal = function () {

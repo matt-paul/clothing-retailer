@@ -49,7 +49,7 @@ module.exports = function(grunt) {
         options: {
                 // files: ['test/unit/*.js'],
                 configFile: 'test/karma.conf.js',
-                // background: true,
+                background: true,
                 singleRun: false
               }
             },
@@ -87,11 +87,11 @@ module.exports = function(grunt) {
   grunt.loadNpmTasks('grunt-contrib-sass');
   grunt.loadNpmTasks('grunt-contrib-watch');
   grunt.loadNpmTasks('grunt-protractor-runner');
-  grunt.loadNpmTasks('grunt-http-server');
   grunt.loadNpmTasks('grunt-karma');
+  grunt.loadNpmTasks('grunt-http-server');
 
   // Default task.
-  grunt.registerTask('default', ['sass', 'jshint','karma', 'watch', 'http-server']);
+  grunt.registerTask('default', ['sass', 'jshint','karma','http-server', 'watch']);
 
 };
 

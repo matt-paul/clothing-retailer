@@ -1,6 +1,14 @@
 .basket {
-  background-color: red;
-  width: 200px;
+  position: fixed;
+  margin: 5%;
+  margin-left: 60%;
+  background-color: $shop-foreground;
+  width: 300px;
   height: 400px;
   float: right;
+  border: $retailer-border;
+    .basket-items {
+      min-height: 200px;
+      border: $retailer-border;
+  }
 }
