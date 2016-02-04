@@ -15,6 +15,7 @@ To run unit tests in a seperate terminal...
 ```
 karma start test/karma.conf.js
 ```
+The basket can be viewed in the top right of the screen;
 
 ##Considerations Of The Task
 
