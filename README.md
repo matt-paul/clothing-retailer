@@ -11,11 +11,6 @@ Run unit tests...
 ```
 karma start test/karma.conf.js
 ```
-Run end to end tests
-```
-webdriver-manager start
-
-```
 
 I decided to make my shop responsive using a flexbox design. The benefit was that this minimised the need to use responsive libraries
 such as bootstrap which contain large amounts of redundant (for this task) data.
