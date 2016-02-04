@@ -237,6 +237,63 @@
       "type": "integer"
     }
   },
+  {
+    "name": {
+      "description": "Mid Twist Cut-Out Dress, Pink",
+      "type": "string"
+    },
+    "category": {
+      "description": "Women's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "540.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "5",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+  {
+    "name": {
+      "description": "Mid Twist Cut-Out Dress, Pink",
+      "type": "string"
+    },
+    "category": {
+      "description": "Women's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "540.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "5",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
+  {
+    "name": {
+      "description": "Mid Twist Cut-Out Dress, Pink",
+      "type": "string"
+    },
+    "category": {
+      "description": "Women's Formalwear",
+      "type": "string"
+    },
+    "price": {
+        "unit": "540.00",
+        "type": "integer"
+    },
+    "stock": {
+      "units": "5",
+      "minimum": "0",
+      "type": "integer"
+    }
+  },
 
   {
     "name": {

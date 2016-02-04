@@ -2,20 +2,20 @@
 
   <div class="product-list">
 
-    <div class="product" ng-repeat="product in ctrl.productList">
+    <div class="product" ng-repeat="product in ctrl.productList"
+                         ng-class="{ghost: $index > 12}">
       <div class="product-image-container">
         <img src="http://placehold.it/400x400" alt=" {{ product.name.description }} Picture">
       </div>
-    <div class="product-info">
-      <h4 class="product-name">{{ product.name.description }}</h4>
-      <p class="product-price">{{ product.price.unit | currency:"£"}}</p>
-      <p class="product-stock"> In stock: {{ product.stock.units }}</p>
-      <button class="button-add" ng-click="ctrl.service.addToBasket(product)">Add to
-      Basket</button>
-      <button class="button-remove"
-        ng-click="ctrl.service.removeFromBasket(product)">Remove</button>
+      <div class="product-info">
+        <h4 class="product-name">{{ product.name.description }}</h4>
+        <p class="product-price">{{ product.price.unit | currency:"£"}}</p>
+        <p class="product-stock"> In stock: {{ product.stock.units }}</p>
+        <button class="button-add" ng-click="ctrl.service.addToBasket(product)">Add to Basket</button>
+        <button class="button-remove" ng-click="ctrl.service.removeFromBasket(product)">Remove</button>
+      </div>
     </div>
-    </div>
+
 
   </div>
 

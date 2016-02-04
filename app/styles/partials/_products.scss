@@ -8,9 +8,6 @@
   background-color: $shop-background;
   flex-direction: row;
   flex-wrap: wrap;
-  // .product:first-child, .product:nth-child(2) {
-    flex: 2 40%;
-    }
   .product {
     margin: 2%;
     padding: 1%;
@@ -33,5 +30,13 @@
       font-size: 60%;
       line-height: 1.5;
     }
-  // }
+  }
+    .ghost {
+    visibility: hidden;
+    flex-grow: 1;
+    flex-basis: 15%;
+    background: transparent;
+    height: 0px;
+    min-width: 200px;
+  }
 }
