@@ -1,4 +1,7 @@
+##Getting Started
 ```
+git clone
+
 cd retailer
 
 npm install
@@ -12,7 +15,7 @@ Run unit tests...
 karma start test/karma.conf.js
 ```
 
-#Considerations Of The Task
+##Considerations Of The Task
 
 I decided to make my shop responsive using a flexbox design. The benefit was that this minimised the need to use responsive libraries such as Bootstrap which contain large amounts of redundant (for this task) data.  The disadvantage of this was that it took a lot longer to code css than if I had used a framework, which resulted in less time for other tasks. I hope that this has been worthwhile however, and demonstrated a greater understanding of front end work than had I simply used Bootstrap.
 
