@@ -10,6 +10,8 @@ npm install
 Start up server, lint etc..
 ```
 grunt
+
+In a web browser, visit http://127.0.0.1:8080/
 ```
 To run unit tests in a seperate terminal...
 ```
